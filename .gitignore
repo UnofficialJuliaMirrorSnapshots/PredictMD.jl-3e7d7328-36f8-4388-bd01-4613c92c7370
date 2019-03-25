@@ -1,0 +1,36 @@
+##### Beginning of file
+
+### Directories to ignore:
+
+*.ipynb_checkpoints/
+
+data/
+
+docs/build/
+docs/site/
+docs/src/examples/
+
+input/
+
+output/
+
+### Files to ignore:
+
+.DS_Store
+
+*.aux
+
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+*.jls
+
+*.log
+
+deps/custom_preamble.tex
+deps/deps.jl
+deps/*.svg
+
+scratch.jl
+
+##### End of file
