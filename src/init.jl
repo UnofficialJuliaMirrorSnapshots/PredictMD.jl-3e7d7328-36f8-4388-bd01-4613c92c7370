@@ -1,5 +1,3 @@
-##### Beginning of file
-
 import Requires
 
 const _predictmd_has_MLJ = Ref(false)
@@ -55,8 +53,6 @@ function __init__()::Nothing
         end
     end
 
-    _print_welcome_message()
+    print_welcome_message()
     return nothing
 end
-
-##### End of file

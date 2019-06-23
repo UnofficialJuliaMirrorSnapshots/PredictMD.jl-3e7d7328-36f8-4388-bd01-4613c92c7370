@@ -1,5 +1,3 @@
-##### Beginning of file
-
 import Pkg
 
 Pkg.add("Documenter")
@@ -81,7 +79,7 @@ if COMPILED_MODULES_CURRENT_VALUE == COMPILED_MODULES_VALUE_FOR_DOCS
             "python-markdown-math",
             ),
         julia = JULIA_VERSION_FOR_DOCS,
-        latest = "develop",
+        latest = "master",
         osname = "linux",
         repo = "github.com/bcbi/PredictMD.jl.git",
         target = "site",
@@ -92,4 +90,3 @@ end
 
 ENV["PREDICTMD_IS_DEPLOY_DOCS"] = "false"
 
-##### End of file

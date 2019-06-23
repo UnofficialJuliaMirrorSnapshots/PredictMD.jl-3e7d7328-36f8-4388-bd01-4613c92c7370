@@ -1,5 +1,3 @@
-##### Beginning of file
-
 """
 """
 function set_feature_contrasts!(
@@ -72,7 +70,7 @@ function predict_proba(
         single_labelprobabilities::AbstractDict;
         kwargs...
         )
-    labelint2stringmap = _getlabelint2stringmap(
+    labelint2stringmap = getlabelint2stringmap(
         transformer.levels,
         transformer.index,
         )
@@ -84,4 +82,3 @@ function predict_proba(
     return result
 end
 
-##### End of file

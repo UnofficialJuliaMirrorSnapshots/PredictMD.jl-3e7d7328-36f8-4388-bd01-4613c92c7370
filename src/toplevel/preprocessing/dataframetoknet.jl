@@ -1,5 +1,3 @@
-##### Beginning of file
-
 import DataFrames
 import StatsModels
 
@@ -230,7 +228,7 @@ function transform(
     elseif length(transformer.label_names) == 1
         label_1 = transformer.label_names[1]
         levels_1 = transformer.label_levels[label_1]
-        labelstring2intmap_1 = _getlabelstring2intmap(
+        labelstring2intmap_1 = getlabelstring2intmap(
             levels_1,
             transformer.index,
             )
@@ -244,7 +242,7 @@ function transform(
         for j = 1:length(transformer.label_names)
             label_j = transformer.label_names[j]
             levels_j = transformer.label_levels[label_j]
-            labelstring2intmap_j = _getlabelstring2intmap(
+            labelstring2intmap_j = getlabelstring2intmap(
                 levels_j,
                 transformer.index,
                 )
@@ -408,4 +406,3 @@ function transform(
     return featuresarray
 end
 
-##### End of file

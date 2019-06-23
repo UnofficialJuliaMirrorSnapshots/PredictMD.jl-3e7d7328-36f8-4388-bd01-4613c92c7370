@@ -1,5 +1,3 @@
-##### Beginning of file
-
 import LIBSVM
 
 function LIBSVMModel(
@@ -198,7 +196,7 @@ end
 
 """
 """
-function _single_labelmulticlassdataframesvmclassifier_LIBSVM(
+function single_labelmulticlassdataframesvmclassifier_LIBSVM(
         feature_names::AbstractVector,
         single_label_name::Symbol,
         single_label_levels::AbstractVector;
@@ -289,7 +287,7 @@ function single_labelmulticlassdataframesvmclassifier(
         feature_contrasts::Union{Nothing, AbstractFeatureContrasts} = nothing,
         )
     if package == :LIBSVM
-        result = _single_labelmulticlassdataframesvmclassifier_LIBSVM(
+        result = single_labelmulticlassdataframesvmclassifier_LIBSVM(
             feature_names,
             single_label_name,
             single_label_levels;
@@ -317,7 +315,7 @@ end
 
 """
 """
-function _single_labeldataframesvmregression_LIBSVM(
+function single_labeldataframesvmregression_LIBSVM(
         feature_names::AbstractVector,
         single_label_name::Symbol;
         name::AbstractString = "",
@@ -401,7 +399,7 @@ function single_labeldataframesvmregression(
         feature_contrasts::Union{Nothing, AbstractFeatureContrasts} = nothing,
         )
     if package == :LIBSVM
-        result = _single_labeldataframesvmregression_LIBSVM(
+        result = single_labeldataframesvmregression_LIBSVM(
             feature_names,
             single_label_name;
             name = name,
@@ -426,4 +424,3 @@ function single_labeldataframesvmregression(
     end
 end
 
-##### End of file

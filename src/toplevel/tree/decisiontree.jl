@@ -1,5 +1,3 @@
-##### Beginning of file
-
 import DecisionTree
 
 function DecisionTreeModel(
@@ -169,7 +167,7 @@ end
 
 """
 """
-function _single_labelmulticlassdfrandomforestclassifier_DecisionTree(
+function single_labelmulticlassdfrandomforestclassifier_DecisionTree(
         feature_names::AbstractVector,
         single_label_name::Symbol,
         single_label_levels::AbstractVector;
@@ -227,7 +225,7 @@ function single_labelmulticlassdataframerandomforestclassifier(
         )
     if package == :DecisionTree
         result =
-            _single_labelmulticlassdfrandomforestclassifier_DecisionTree(
+            single_labelmulticlassdfrandomforestclassifier_DecisionTree(
                 feature_names,
                 single_label_name,
                 single_label_levels;
@@ -244,7 +242,7 @@ end
 
 """
 """
-function _single_labeldataframerandomforestregression_DecisionTree(
+function single_labeldataframerandomforestregression_DecisionTree(
         feature_names::AbstractVector,
         single_label_name::Symbol;
         name::AbstractString = "",
@@ -293,7 +291,7 @@ function single_labeldataframerandomforestregression(
         feature_contrasts::Union{Nothing, AbstractFeatureContrasts} = nothing,
         )
     if package == :DecisionTree
-        result = _single_labeldataframerandomforestregression_DecisionTree(
+        result = single_labeldataframerandomforestregression_DecisionTree(
             feature_names,
             single_label_name;
             name = name,
@@ -307,4 +305,3 @@ function single_labeldataframerandomforestregression(
     end
 end
 
-##### End of file
