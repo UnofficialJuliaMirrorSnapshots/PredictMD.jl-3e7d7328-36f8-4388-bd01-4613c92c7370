@@ -53,13 +53,13 @@ end
 
 """
 """
-struct SimplePipeline <: AbstractPipeline
-    name::T1 where T1 <: AbstractString
-    objectsvector::T2 where T2 <: AbstractVector{Fittable}
+mutable struct SimplePipeline{S<:AbstractString, T<:AbstractVector} <: AbstractPipeline
+    name::S
+    objectsvector::T
 end
 
-struct PGFPlotsXPlot{T} <: AbstractPlot{T}
-    underlying_object::T
+struct PGFPlotsXPlot <: AbstractPlot
+    underlying_object::T where T <: Any
 end
 
 """
@@ -202,4 +202,11 @@ mutable struct DecisionTreeModel <:
 
     # parameters (learned from data):
     underlyingrandomforest::T7 where T7 <: Any
+end
+
+"""
+"""
+struct CrossValidation{T}
+    leavein::Vector{CrossValidation{T}}
+    leaveout::Vector{Vector{T}}
 end
