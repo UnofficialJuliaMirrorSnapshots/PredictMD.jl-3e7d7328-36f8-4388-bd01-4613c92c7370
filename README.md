@@ -73,9 +73,9 @@ everything is working. You can run the test suite by running the following five 
 ```julia
 import Pkg
 Pkg.activate("PredictMDEnvironment"; shared = true)
-Pkg.test("PredictMD")
 Pkg.test("PredictMDExtra")
 Pkg.test("PredictMDFull")
+Pkg.test("PredictMD")
 ```
 
 ## Citing
@@ -107,9 +107,9 @@ import PredictMDFull
 You can run the test suite by running the following four lines in Julia:
 ```julia
 import Pkg
-Pkg.test("PredictMD")
 Pkg.test("PredictMDExtra")
 Pkg.test("PredictMDFull")
+Pkg.test("PredictMD")
 ```
 
 After you have exited the container, you can return to it by running the following line:
@@ -145,6 +145,7 @@ PredictMD's internals.
 - [PredictMDAPI.jl](https://github.com/bcbi/PredictMDAPI.jl) - Provides the abstract types and generic functions that define the PredictMD application programming interface (API)
 - [PredictMDExtra.jl](https://github.com/bcbi/PredictMDExtra.jl) - Install all of the dependencies of PredictMD (but not PredictMD itself)
 - [PredictMDFull.jl](https://github.com/bcbi/PredictMDFull.jl) - Install PredictMD and all of its dependencies
+- [PredictMDSanitizer.jl](https://github.com/bcbi/PredictMDSanitizer.jl) - Remove potentially sensitive data from trained machine learning models
 
 ## Contributing
 
